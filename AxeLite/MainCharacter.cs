@@ -16,7 +16,7 @@ namespace AxeLite
 
         //Personagem principal
         public static Texture2D Character;
-        public Vector2 CharacterPosition = new Vector2(20, 20);
+        public Vector2 CharacterPosition;
         public Rectangle CharHitbox;
         public bool Touching;
 
@@ -29,6 +29,7 @@ namespace AxeLite
 
         //Ataque (Bola de fogo)
         public static Texture2D[] Projectile = new Texture2D[4];
+        public static float rotacao;
         public int ProjCount = 1;
         public Rectangle FireballHitbox;
         public int Dir = 1;
@@ -140,17 +141,28 @@ namespace AxeLite
                 //Determinar do vetor da movimento para o projetil
 
                 if (Dir == 1)//seta para cima ou seja dispara para cima
-                    ProjMovement = new Vector2(0, -5);
-
+                {
+                    ProjMovement = new Vector2(0, -10);
+                    rotacao = 3 * (float)Math.PI / 2;
+                }
+                
                 if (Dir == 2)//seta para baixo ou seja dispara para baixo
-                    ProjMovement = new Vector2(0, 5);
-
+                {
+                    ProjMovement = new Vector2(0, 10);
+                    rotacao = (float)Math.PI / 2;
+                }
+                
                 if (Dir == 3)//Seta para a direita dispara para a direita
-                    ProjMovement = new Vector2(5, 0);
-
+                {
+                    ProjMovement = new Vector2(10, 0);
+                    rotacao = 0;
+                }
+                
                 if (Dir == 4)//Seta para a esquerda dispara para a esquerda
-                    ProjMovement = new Vector2(-5, 0);
-
+                {
+                    ProjMovement = new Vector2(-10, 0);
+                    rotacao = (float)Math.PI;
+                }
                 //----------------------------------------------
 
                 disparado = true;
@@ -179,16 +191,18 @@ namespace AxeLite
             if (keystate.IsKeyDown(Keys.S))//Aponta para a baixo
                 Dir = 2;
         }
+
+
         public void movimento(KeyboardState keystate) 
         {
             if (keystate.IsKeyDown(Keys.Right) && CharacterPosition.X + Character.Width < GraphicsViewport.Width)//Direita
-                CharacterPosition.X += 3;   
+                CharacterPosition.X += 4;   
             if (keystate.IsKeyDown(Keys.Left) && CharacterPosition.X > 0)//Esquerda
-                CharacterPosition.X -= 3;
+                CharacterPosition.X -= 4;
             if (keystate.IsKeyDown(Keys.Up) && CharacterPosition.Y > 0)//Cima
-                CharacterPosition.Y -= 3;
+                CharacterPosition.Y -= 4;
             if (keystate.IsKeyDown(Keys.Down) && CharacterPosition.Y + Character.Height < GraphicsViewport.Height)//baixo
-                CharacterPosition.Y += 3;
+                CharacterPosition.Y += 4;
 
         }
 
@@ -200,7 +214,7 @@ namespace AxeLite
             
             
             if(disparado)
-                spritebatch.Draw(Projectile[ProjCount], ProjPosition, Color.White);
+                spritebatch.Draw(Projectile[ProjCount], ProjPosition, null, Color.White, rotacao, new Vector2(0, 0), new Vector2(1,1), SpriteEffects.None, 0f); 
             
             spritebatch.Draw(Character, CharacterPosition, Color.White);
 

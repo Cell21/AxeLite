@@ -76,7 +76,7 @@ namespace AxeLite
             if (EnemyPosition.Y < 0 || EnemyPosition.Y + Enemy.Height > GraphicsViewport.Height)
             {
                 EnemyMov.Y *= -1;
-                
+
                 if (EnemyMov.Y > 0)
                     EnemyMov.Y += 1;
                 else
@@ -87,7 +87,8 @@ namespace AxeLite
         //Draw inimigo
         public void draw(SpriteBatch spritebatch) 
         {
-                spritebatch.Draw(Enemy, EnemyPosition, Color.White);
+                if(HP > 0)
+                    spritebatch.Draw(Enemy, EnemyPosition, Color.White);
         }
     }
 }

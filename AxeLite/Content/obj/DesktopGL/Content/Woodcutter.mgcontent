@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Woodcutter.png</SourceFile>
-  <SourceTime>2020-01-09T07:35:18.0352493+00:00</SourceTime>
-  <DestFile>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/bin/DesktopGL/Content/Woodcutter.xnb</DestFile>
-  <DestTime>2022-05-21T07:56:51.7421759+01:00</DestTime>
+  <SourceFile>C:/Users/celes/OneDrive/Documentos/GitHub/AxeLite/AxeLite/Content/Woodcutter.png</SourceFile>
+  <SourceTime>2022-05-27T09:10:37.7653142+01:00</SourceTime>
+  <DestFile>C:/Users/celes/OneDrive/Documentos/GitHub/AxeLite/AxeLite/Content/bin/DesktopGL/Content/Woodcutter.xnb</DestFile>
+  <DestTime>2022-05-27T09:13:06.1357871+01:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2020-08-10T16:17:54+01:00</ImporterTime>
+  <ImporterTime>2020-08-10T17:17:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2020-08-10T16:17:54+01:00</ProcessorTime>
+  <ProcessorTime>2020-08-10T17:17:54+01:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

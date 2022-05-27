@@ -106,6 +106,8 @@ namespace AxeLite
                 //Update do bouncing enemy
                 if (InimigoRessalto.HP > 0)
                     InimigoRessalto.update(Personagem);
+                
+                   
             }else
 
             base.Update(gameTime);
