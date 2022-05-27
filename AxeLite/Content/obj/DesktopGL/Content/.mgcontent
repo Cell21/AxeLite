@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/arrow.png</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/ball.png</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/BolaDeFogo 1.gif</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/BolaDeFogo 2.gif</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/BolaDeFogo 3.gif</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/ChaoTdj.png</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Dozing_Dragon.png</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Font.spritefont</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Woodcutter.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

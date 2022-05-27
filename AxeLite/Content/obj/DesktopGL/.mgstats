@@ -1,0 +1,8 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/celes/source/repos/AxeLite/AxeLite/Content/arrow.png","C:/Users/celes/source/repos/AxeLite/AxeLite/Content/bin/DesktopGL/arrow.xnb","TextureProcessor","Texture2DContent",51056,6229,0,4086364
+"C:/Users/celes/source/repos/AxeLite/AxeLite/Content/ball.png","C:/Users/celes/source/repos/AxeLite/AxeLite/Content/bin/DesktopGL/ball.xnb","TextureProcessor","Texture2DContent",8368,16469,0,0117402
+"C:/Users/celes/source/repos/AxeLite/AxeLite/Content/BolaDeFogo 1.gif","C:/Users/celes/source/repos/AxeLite/AxeLite/Content/bin/DesktopGL/BolaDeFogo 1.xnb","TextureProcessor","Texture2DContent",899,4181,0,0056493
+"C:/Users/celes/source/repos/AxeLite/AxeLite/Content/BolaDeFogo 2.gif","C:/Users/celes/source/repos/AxeLite/AxeLite/Content/bin/DesktopGL/BolaDeFogo 2.xnb","TextureProcessor","Texture2DContent",920,4181,0,0093293
+"C:/Users/celes/source/repos/AxeLite/AxeLite/Content/BolaDeFogo 3.gif","C:/Users/celes/source/repos/AxeLite/AxeLite/Content/bin/DesktopGL/BolaDeFogo 3.xnb","TextureProcessor","Texture2DContent",925,4181,0,0075121
+"C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Dozing_Dragon.png","C:/Users/celes/source/repos/AxeLite/AxeLite/Content/bin/DesktopGL/Dozing_Dragon.xnb","TextureProcessor","Texture2DContent",1096,16469,0,0036928
+"C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Woodcutter.png","C:/Users/celes/source/repos/AxeLite/AxeLite/Content/bin/DesktopGL/Woodcutter.xnb","TextureProcessor","Texture2DContent",1178,9301,0,0025387

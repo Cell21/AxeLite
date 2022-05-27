@@ -1,0 +1,32 @@
+C:\Users\celes\source\repos\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.csprojAssemblyReference.cache
+C:\Users\celes\source\repos\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.AssemblyInfoInputs.cache
+C:\Users\celes\source\repos\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.AssemblyInfo.cs
+C:\Users\celes\source\repos\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.csproj.CoreCompileInputs.cache
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\AxeLite.exe
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\AxeLite.deps.json
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\AxeLite.runtimeconfig.json
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\AxeLite.runtimeconfig.dev.json
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\AxeLite.dll
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\AxeLite.pdb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+C:\Users\celes\source\repos\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.csproj.CopyComplete
+C:\Users\celes\source\repos\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.dll
+C:\Users\celes\source\repos\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.pdb
+C:\Users\celes\source\repos\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.genruntimeconfig.cache
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\Dozing_Dragon.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\arrow.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\Woodcutter.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\ball.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\BolaDeFogo 1.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\BolaDeFogo 2.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\BolaDeFogo 3.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\Font.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\ChaoTdj.xnb
