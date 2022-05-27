@@ -30,3 +30,4 @@ C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\Bola
 C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\BolaDeFogo 3.xnb
 C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\Font.xnb
 C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\ChaoTdj.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\MenuPixelArt.xnb

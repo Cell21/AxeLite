@@ -27,9 +27,9 @@ namespace AxeLite
 
 
         //Construtor
-        public BouncingEnemy()
+        public BouncingEnemy(Viewport viewport)
         {
-            EnemyPosition = new Vector2(r.Next(1, 50), 1);
+            EnemyPosition = new Vector2(r.Next(1, viewport.Width - 15), 1);
             EnemyMov = new Vector2(r.Next(1, 4), r.Next(2, 5));
         }
 
@@ -87,7 +87,6 @@ namespace AxeLite
         //Draw inimigo
         public void draw(SpriteBatch spritebatch) 
         {
-            if(HP > 0)
                 spritebatch.Draw(Enemy, EnemyPosition, Color.White);
         }
     }

@@ -43,8 +43,10 @@ namespace AxeLite
 
 
         //Preciso de um construtor
-        public MainCharacter() 
+        public MainCharacter(int x, int y) 
         {
+            CharacterPosition.X = x/2;
+            CharacterPosition.Y = y/2;
         }
 
 
@@ -76,7 +78,7 @@ namespace AxeLite
             movimento(keystate);
 
             //Trata da colisoes
-            colisao(Inimigo.EnemyHitBox, Inimigo.Damage, Inimigo.HP);
+            colisao(Inimigo.EnemyHitBox, Inimigo.Damage);
 
             //Trata do ataque do jogador
             ataque(keystate, Inimigo.EnemyHitBox);
@@ -87,9 +89,9 @@ namespace AxeLite
 
 
         //Esta função trata da colisao entre o Jogador e o Inimigo que faz com que o jogador perca HP
-        public void colisao(Rectangle EnemyHitBox, int Dmg, int EnemyHp) 
+        public void colisao(Rectangle EnemyHitBox, int Dmg) 
         {
-            if (CharHitbox.Intersects(EnemyHitBox) && Touching == false && EnemyHp > 0)
+            if (CharHitbox.Intersects(EnemyHitBox) && Touching == false)
             {
                 Touching = true;
                 

@@ -9,12 +9,16 @@ namespace AxeLite
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
+        UI Menu;
+
         MainCharacter Personagem;
 
         BouncingEnemy InimigoRessalto;
 
         Texture2D Background;
         Rectangle SizeBackground;
+
+        
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -26,8 +30,9 @@ namespace AxeLite
         {
             // TODO: Add your initialization logic here
 
-            Personagem = new MainCharacter();
-            InimigoRessalto = new BouncingEnemy();
+            Personagem = new MainCharacter(_graphics.GraphicsDevice.Viewport.Width, _graphics.GraphicsDevice.Viewport.Height);
+            InimigoRessalto = new BouncingEnemy(_graphics.GraphicsDevice.Viewport);
+            Menu = new UI(_graphics.GraphicsDevice.Viewport.Width, _graphics.GraphicsDevice.Viewport.Height);
 
             base.Initialize();
         }
@@ -44,6 +49,9 @@ namespace AxeLite
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+
+            //Carregar o menu de iniciar e pausa
+            Menu.PauseMenu = Content.Load<Texture2D>("MenuPixelArt");
 
 
             //Carregar o Background
@@ -81,19 +89,25 @@ namespace AxeLite
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 Exit();
 
             // TODO: Add your update logic here
 
 
+            Menu.update(gameTime);
 
-            //Update do personagem
-            Personagem.update(gameTime, InimigoRessalto);
+            if (Menu.Playing)
+            {
+                //Update do personagem
+                Personagem.update(gameTime, InimigoRessalto);
 
 
-            //Update do bouncing enemy
-            InimigoRessalto.update(Personagem);
+                //Update do bouncing enemy
+                if (InimigoRessalto.HP > 0)
+                    InimigoRessalto.update(Personagem);
+            }else
+
             base.Update(gameTime);
         }
 
@@ -111,6 +125,8 @@ namespace AxeLite
             _spriteBatch.Draw(Background, SizeBackground, Color.White);
             InimigoRessalto.draw(_spriteBatch);
             Personagem.draw(_spriteBatch);
+            if(!Menu.Playing)
+                Menu.draw(_spriteBatch);
             _spriteBatch.End();
 
             base.Draw(gameTime);

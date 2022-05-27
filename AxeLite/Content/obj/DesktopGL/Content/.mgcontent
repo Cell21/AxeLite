@@ -12,9 +12,11 @@
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/ChaoTdj.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Dozing_Dragon.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Font.spritefont</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/MenuPixelArt.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Woodcutter.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
