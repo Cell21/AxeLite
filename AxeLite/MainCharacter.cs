@@ -13,16 +13,17 @@ namespace AxeLite
     class MainCharacter
     {
         public static Viewport GraphicsViewport;
-
+        
         //Personagem principal
-        public static Texture2D Character;
+        public static Texture2D[] Character = new Texture2D[4];
         public Vector2 CharacterPosition;
         public Rectangle CharHitbox;
         public bool Touching;
+        public int lado = 1;
 
         //Personagem principal STATS
-        public static SpriteFont VidaText;
-        public int HP = 10;
+        public static Texture2D[] Vidas = new Texture2D[6];
+        public int HP = 5;
         public int Damage = 2;
 
         
@@ -69,7 +70,7 @@ namespace AxeLite
             KeyboardState keystate = Keyboard.GetState();
 
 
-            CharHitbox = new Rectangle((int)CharacterPosition.X, (int)CharacterPosition.Y, Character.Width, Character.Height);
+            CharHitbox = new Rectangle((int)CharacterPosition.X, (int)CharacterPosition.Y, Character[1].Width, Character[1].Height);
 
 
             //Trata de apontar 
@@ -79,7 +80,7 @@ namespace AxeLite
             movimento(keystate);
 
             //Trata da colisoes
-            colisao(Inimigo.EnemyHitBox, Inimigo.Damage);
+            colisao(Inimigo.EnemyHitBox, Inimigo.Damage, Inimigo.HP);
 
             //Trata do ataque do jogador
             ataque(keystate, Inimigo.EnemyHitBox);
@@ -90,13 +91,14 @@ namespace AxeLite
 
 
         //Esta função trata da colisao entre o Jogador e o Inimigo que faz com que o jogador perca HP
-        public void colisao(Rectangle EnemyHitBox, int Dmg) 
+        public void colisao(Rectangle EnemyHitBox, int Dmg, int EnemyHp) 
         {
-            if (CharHitbox.Intersects(EnemyHitBox) && Touching == false)
+            if (CharHitbox.Intersects(EnemyHitBox) && Touching == false && EnemyHp > 0)
             {
                 Touching = true;
                 
-                HP -= Dmg;
+                if(HP > 0)
+                    HP -= Dmg;
                 
             }
 
@@ -144,24 +146,28 @@ namespace AxeLite
                 {
                     ProjMovement = new Vector2(0, -10);
                     rotacao = 3 * (float)Math.PI / 2;
+                    lado = 3;
                 }
                 
                 if (Dir == 2)//seta para baixo ou seja dispara para baixo
                 {
                     ProjMovement = new Vector2(0, 10);
                     rotacao = (float)Math.PI / 2;
+                    
                 }
                 
                 if (Dir == 3)//Seta para a direita dispara para a direita
                 {
                     ProjMovement = new Vector2(10, 0);
                     rotacao = 0;
+                    lado = 2;
                 }
                 
                 if (Dir == 4)//Seta para a esquerda dispara para a esquerda
                 {
                     ProjMovement = new Vector2(-10, 0);
                     rotacao = (float)Math.PI;
+                    lado = 1;
                 }
                 //----------------------------------------------
 
@@ -193,15 +199,22 @@ namespace AxeLite
         }
 
 
-        public void movimento(KeyboardState keystate) 
+        public void movimento(KeyboardState keystate)
         {
-            if (keystate.IsKeyDown(Keys.Right) && CharacterPosition.X + Character.Width < GraphicsViewport.Width)//Direita
-                CharacterPosition.X += 4;   
+            if (keystate.IsKeyDown(Keys.Right) && CharacterPosition.X + Character[1].Width < GraphicsViewport.Width)//Direita
+            {   CharacterPosition.X += 4;
+                lado = 2; 
+            }
+
             if (keystate.IsKeyDown(Keys.Left) && CharacterPosition.X > 0)//Esquerda
+            { 
                 CharacterPosition.X -= 4;
+                lado = 1;
+            }
+
             if (keystate.IsKeyDown(Keys.Up) && CharacterPosition.Y > 0)//Cima
                 CharacterPosition.Y -= 4;
-            if (keystate.IsKeyDown(Keys.Down) && CharacterPosition.Y + Character.Height < GraphicsViewport.Height)//baixo
+            if (keystate.IsKeyDown(Keys.Down) && CharacterPosition.Y + Character[1].Height < GraphicsViewport.Height)//baixo
                 CharacterPosition.Y += 4;
 
         }
@@ -216,9 +229,12 @@ namespace AxeLite
             if(disparado)
                 spritebatch.Draw(Projectile[ProjCount], ProjPosition, null, Color.White, rotacao, new Vector2(0, 0), new Vector2(1,1), SpriteEffects.None, 0f); 
             
-            spritebatch.Draw(Character, CharacterPosition, Color.White);
+            spritebatch.Draw(Character[lado], CharHitbox, Color.White);
 
-            spritebatch.DrawString(VidaText, "HP - " + HP, new Vector2(2, 2), Color.White);
+            if (HP > 0)
+                spritebatch.Draw(Vidas[HP], new Vector2(1, 1), Color.White);
+            else
+                spritebatch.Draw(Vidas[1], new Vector2(1, 1), Color.Black);
         }
     }
 }

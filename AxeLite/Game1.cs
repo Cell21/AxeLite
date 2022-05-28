@@ -59,25 +59,29 @@ namespace AxeLite
             SizeBackground = new Rectangle(0, 0, _graphics.GraphicsDevice.Viewport.Width, _graphics.GraphicsDevice.Viewport.Height);//Posicao X, PosicaoY, TamanhoX, TamanhoY
             
 
-            //Carregar a font que vou usar
-            MainCharacter.VidaText = Content.Load<SpriteFont>("Font");
+            
+            
 
             //Carregar a sprite do personagem principal
-            MainCharacter.Character = Content.Load<Texture2D>("Dozing_Dragon");
+            MainCharacter.Character[1] = Content.Load<Texture2D>("Dozing_Dragon");
+            MainCharacter.Character[2] = Content.Load<Texture2D>("Dozing_DragonRight");
+            MainCharacter.Character[3] = Content.Load<Texture2D>("Dozing_DragonUp");
             
+
             //Declarar o viewport para a classe
             MainCharacter.GraphicsViewport = _graphics.GraphicsDevice.Viewport;
             
             //Declarar o meu projetil
             for(int i = 1; i < 4; i++)
                 MainCharacter.Projectile[i] = Content.Load<Texture2D>("BolaDeFogo " + i);
-            
-            
 
+            //Declarar as vidas
+            for (int i = 1; i < 6; i++)
+                MainCharacter.Vidas[i] = Content.Load<Texture2D>(i+"Hearts");
 
 
             //Declarar o inimigo
-            BouncingEnemy.Enemy = Content.Load<Texture2D>("ball");
+            BouncingEnemy.Enemy = Content.Load<Texture2D>("BallBoss");
             //Declarar o viewport para a classe
             BouncingEnemy.GraphicsViewport = _graphics.GraphicsDevice.Viewport;
         }

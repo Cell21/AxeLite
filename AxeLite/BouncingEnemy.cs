@@ -22,14 +22,14 @@ namespace AxeLite
 
         //Stats do inimigo
         public int HP = 3;
-        public int Damage = 2;
+        public int Damage = 1;
 
 
 
         //Construtor
         public BouncingEnemy(Viewport viewport)
         {
-            EnemyPosition = new Vector2(r.Next(1, viewport.Width - 15), 1);
+            EnemyPosition = new Vector2(r.Next(1, viewport.Width - 20), 1);
             EnemyMov = new Vector2(r.Next(1, 4), r.Next(2, 5));
         }
 
@@ -40,8 +40,10 @@ namespace AxeLite
             EnemyHitBox = new Rectangle((int)EnemyPosition.X, (int)EnemyPosition.Y, Enemy.Width, Enemy.Height);
 
             colisao(Personagem.FireballHitbox, Personagem.Damage);
-
-            EnemyMovement();
+            if (HP > 0)
+                EnemyMovement();
+            else
+                EnemyPosition = new Vector2(-50, -50);
         }
 
 

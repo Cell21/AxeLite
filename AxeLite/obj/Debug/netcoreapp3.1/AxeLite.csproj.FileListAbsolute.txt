@@ -65,3 +65,12 @@ C:\Users\celes\OneDrive\Documentos\GitHub\AxeLite\AxeLite\obj\Debug\netcoreapp3.
 C:\Users\celes\OneDrive\Documentos\GitHub\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.dll
 C:\Users\celes\OneDrive\Documentos\GitHub\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.pdb
 C:\Users\celes\OneDrive\Documentos\GitHub\AxeLite\AxeLite\obj\Debug\netcoreapp3.1\AxeLite.genruntimeconfig.cache
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\BallBoss.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\Dozing_DragonRight.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\1Heart.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\2Hearts.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\3Hearts.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\4Hearts.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\5Hearts.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\1Hearts.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\Dozing_DragonUp.xnb
