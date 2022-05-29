@@ -73,22 +73,46 @@ namespace AxeLite
             CharHitbox = new Rectangle((int)CharacterPosition.X, (int)CharacterPosition.Y, Character[1].Width, Character[1].Height);
 
 
-            //Trata de apontar 
-            apontar(keystate);
+            if (HP > 0)
+            {
+                //Trata de apontar 
+                apontar(keystate);
 
-            //Trata do movimento do jogador
-            movimento(keystate);
+                //Trata do movimento do jogador
+                movimento(keystate);
 
-            //Trata da colisoes
-            colisao(Inimigo.EnemyHitBox, Inimigo.Damage, Inimigo.HP);
+                //Trata da colisoes
+                colisao(Inimigo.EnemyHitBox, Inimigo.Damage, Inimigo.HP);
 
-            //Trata do ataque do jogador
-            ataque(keystate, Inimigo.EnemyHitBox);
-            
-            if(disparado == true)
-                animate(gametime);
+                //Trata do ataque do jogador
+                ataque(keystate, Inimigo.EnemyHitBox);
+
+                if (disparado == true)
+                    animate(gametime);
+            }
+            else 
+            {
+                updatedead(Inimigo);
+            }
         }
 
+        public void updatedead(BouncingEnemy inimigo)
+        {
+            KeyboardState keyboardstate = Keyboard.GetState();
+
+            if (keyboardstate.IsKeyDown(Keys.R))
+            {
+                HP = 5;
+                inimigo.HP = 30;
+                inimigo.Damage = 1;
+                inimigo.SegundaFase = false;
+                inimigo.TerceiraFase = false;
+            }
+
+
+            
+                
+        }
 
         //Esta função trata da colisao entre o Jogador e o Inimigo que faz com que o jogador perca HP
         public void colisao(Rectangle EnemyHitBox, int Dmg, int EnemyHp) 
@@ -144,28 +168,28 @@ namespace AxeLite
 
                 if (Dir == 1)//seta para cima ou seja dispara para cima
                 {
-                    ProjMovement = new Vector2(0, -10);
+                    ProjMovement = new Vector2(0, -15);
                     rotacao = 3 * (float)Math.PI / 2;
                     lado = 3;
                 }
                 
                 if (Dir == 2)//seta para baixo ou seja dispara para baixo
                 {
-                    ProjMovement = new Vector2(0, 10);
+                    ProjMovement = new Vector2(0, 15);
                     rotacao = (float)Math.PI / 2;
                     
                 }
                 
                 if (Dir == 3)//Seta para a direita dispara para a direita
                 {
-                    ProjMovement = new Vector2(10, 0);
+                    ProjMovement = new Vector2(15, 0);
                     rotacao = 0;
                     lado = 2;
                 }
                 
                 if (Dir == 4)//Seta para a esquerda dispara para a esquerda
                 {
-                    ProjMovement = new Vector2(-10, 0);
+                    ProjMovement = new Vector2(-15, 0);
                     rotacao = (float)Math.PI;
                     lado = 1;
                 }

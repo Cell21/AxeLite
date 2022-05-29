@@ -74,3 +74,9 @@ C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\4Hea
 C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\5Hearts.xnb
 C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\1Hearts.xnb
 C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\Dozing_DragonUp.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\1Skulls.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\2Skulls.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\3Skulls.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\DeathMenu.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\Grass.xnb
+C:\Users\celes\source\repos\AxeLite\AxeLite\bin\Debug\netcoreapp3.1\Content\YouWin.xnb

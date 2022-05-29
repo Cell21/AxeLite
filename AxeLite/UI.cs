@@ -11,9 +11,14 @@ namespace AxeLite
     {
         public bool started = false;
         public bool Playing = false;
-        public Texture2D PauseMenu;
+        public static Texture2D PauseMenu;
         public Vector2 PosMenu;
 
+        public static Texture2D WinMenu;
+        public bool Win = false;
+
+        public bool Dead = false;
+        public static Texture2D DeadScreen;
 
         public UI(int x, int y)
         {
@@ -50,9 +55,22 @@ namespace AxeLite
         }
 
 
-        public void draw(SpriteBatch spritebatch) 
+        public void draw(SpriteBatch spritebatch)
         {
             spritebatch.Draw(PauseMenu, PosMenu, Color.White);
+
+
         }
+
+
+        
+
+        public void drawLoseScreen(SpriteBatch spritebatch) 
+        {
+            spritebatch.Draw(DeadScreen, new Rectangle((int)PosMenu.X, (int)PosMenu.Y, PauseMenu.Width, PauseMenu.Height + 20), Color.White);
+        }
+
+
+        
     }
 }

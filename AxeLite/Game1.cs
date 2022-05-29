@@ -51,16 +51,17 @@ namespace AxeLite
             // TODO: use this.Content to load your game content here
 
             //Carregar o menu de iniciar e pausa
-            Menu.PauseMenu = Content.Load<Texture2D>("MenuPixelArt");
-
+            UI.PauseMenu = Content.Load<Texture2D>("MenuPixelArt");
+            UI.DeadScreen = Content.Load<Texture2D>("DeathMenu");
+            UI.WinMenu = Content.Load<Texture2D>("YouWin");
 
             //Carregar o Background
-            Background = Content.Load<Texture2D>("ChaoTdj");
+            Background = Content.Load<Texture2D>("Grass");
             SizeBackground = new Rectangle(0, 0, _graphics.GraphicsDevice.Viewport.Width, _graphics.GraphicsDevice.Viewport.Height);//Posicao X, PosicaoY, TamanhoX, TamanhoY
             
 
             
-            
+            //------------------RELACIONADO COM O PERSONAGEM----------------------
 
             //Carregar a sprite do personagem principal
             MainCharacter.Character[1] = Content.Load<Texture2D>("Dozing_Dragon");
@@ -79,11 +80,21 @@ namespace AxeLite
             for (int i = 1; i < 6; i++)
                 MainCharacter.Vidas[i] = Content.Load<Texture2D>(i+"Hearts");
 
+            //---------------------------------------------------------------------
+
+            //-------------------RELACIONADO COM O INIMIGO-------------------------
 
             //Declarar o inimigo
             BouncingEnemy.Enemy = Content.Load<Texture2D>("BallBoss");
+            
             //Declarar o viewport para a classe
             BouncingEnemy.GraphicsViewport = _graphics.GraphicsDevice.Viewport;
+
+            //Dar load a sprite das vidas do inimigo
+            for(int i = 1; i < 4; i++)
+                BouncingEnemy.EnemyHP[i] = Content.Load<Texture2D>(i+"Skulls");
+
+            //---------------------------------------------------------------------
         }
 
 
@@ -93,26 +104,40 @@ namespace AxeLite
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                Exit();
-
+            KeyboardState keyboard = Keyboard.GetState();
             // TODO: Add your update logic here
 
+            if(Personagem.HP > 0)
+                Menu.update(gameTime);
 
-            Menu.update(gameTime);
+            if(!Menu.Playing && keyboard.IsKeyDown(Keys.Escape))
+                Exit();
 
-            if (Menu.Playing)
+            if (Menu.Playing && Personagem.HP > 0)
             {
                 //Update do personagem
                 Personagem.update(gameTime, InimigoRessalto);
 
 
                 //Update do bouncing enemy
-                if (InimigoRessalto.HP > 0)
-                    InimigoRessalto.update(Personagem);
+                InimigoRessalto.update(Personagem);
+
+
+            }
+
+            if (Personagem.HP <= 0)//Se morrer
+            {
+                Menu.Dead = true;
+                Personagem.update(gameTime, InimigoRessalto);
                 
-                   
-            }else
+                if (keyboard.IsKeyDown(Keys.Escape))
+                    Exit();
+            }
+            else
+                Menu.Dead = false;
+
+            if (InimigoRessalto.HP <= 0)
+                Menu.Win = true;
 
             base.Update(gameTime);
         }
@@ -128,11 +153,24 @@ namespace AxeLite
             //desenhar o jogo
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(Background, SizeBackground, Color.White);
+            if(Menu.Win)
+                _spriteBatch.Draw(Background, SizeBackground, Color.Black);
+            else
+                _spriteBatch.Draw(Background, SizeBackground, Color.White);
+ 
             InimigoRessalto.draw(_spriteBatch);
+            
             Personagem.draw(_spriteBatch);
+            
             if(!Menu.Playing)
                 Menu.draw(_spriteBatch);
+            
+            if (Menu.Dead)
+                Menu.drawLoseScreen(_spriteBatch);
+
+            if (Menu.Win)
+                _spriteBatch.Draw(UI.WinMenu, new Vector2((_graphics.GraphicsDevice.Viewport.Width / 2)-(UI.WinMenu.Width / 2), (_graphics.GraphicsDevice.Viewport.Height / 2)-(UI.WinMenu.Height / 2)), Color.White);
+            
             _spriteBatch.End();
 
             base.Draw(gameTime);

@@ -5,8 +5,11 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/1Hearts.png</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/1Skulls.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/2Hearts.png</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/2Skulls.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/3Hearts.png</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/3Skulls.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/4Hearts.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/5Hearts.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/BallBoss.png</File>
@@ -14,13 +17,22 @@
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/BolaDeFogo 2.gif</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/BolaDeFogo 3.gif</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/ChaoTdj.png</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/DeathMenu.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Dozing_Dragon.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Dozing_DragonRight.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Dozing_DragonUp.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Font.spritefont</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/Grass.png</File>
     <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/MenuPixelArt.png</File>
+    <File>C:/Users/celes/source/repos/AxeLite/AxeLite/Content/YouWin.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
